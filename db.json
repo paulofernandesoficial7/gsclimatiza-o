@@ -1,0 +1,72 @@
+{
+  "teams": [
+    {
+      "id": "1",
+      "name": "João Silva",
+      "username": "joao",
+      "password": "123456",
+      "role": "technician"
+    },
+    {
+      "id": "2",
+      "name": "Maria Santos",
+      "username": "maria",
+      "password": "123456",
+      "role": "technician"
+    },
+    {
+      "id": "3",
+      "name": "Administrador",
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
+    }
+  ],
+  "os": [],
+  "services": [
+    {
+      "id": "1",
+      "name": "Manutenção Preventiva",
+      "price": 150
+    },
+    {
+      "id": "2",
+      "name": "Limpeza de Ar Condicionado",
+      "price": 120
+    }
+  ],
+  "stock": [
+    {
+      "id": "1",
+      "name": "Gás R410A",
+      "quantity": 15,
+      "unit": "kg"
+    },
+    {
+      "id": "2",
+      "name": "Filtro de Ar",
+      "quantity": 25,
+      "unit": "unidade"
+    },
+    {
+      "id": "3",
+      "name": "Capacitor",
+      "quantity": 10,
+      "unit": "unidade"
+    },
+    {
+      "id": "dc0f",
+      "name": "Produto Teste Console",
+      "quantity": 99,
+      "unit": "unidade"
+    },
+    {
+      "id": "1289",
+      "name": "bucha",
+      "category": "Outros",
+      "quantity": 10,
+      "price": 10,
+      "minimumStock": 5
+    }
+  ]
+}
