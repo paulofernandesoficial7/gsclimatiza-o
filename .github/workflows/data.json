@@ -1,0 +1,28 @@
+{
+  "teams": [
+    {
+      "id": 1,
+      "name": "João Silva",
+      "username": "joao",
+      "password": "123456",
+      "role": "technician"
+    },
+    {
+      "id": 2,
+      "name": "Maria Santos",
+      "username": "maria", 
+      "password": "123456",
+      "role": "technician"
+    },
+    {
+      "id": 3,
+      "name": "Administrador",
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
+    }
+  ],
+  "os": [],
+  "services": [],
+  "stock": []
+}
