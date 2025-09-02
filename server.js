@@ -13,12 +13,18 @@ app.get('/api/teams', (req, res) => {
 });
 
 app.post('/api/login', (req, res) => {
-    const { username, password } = req.body;
+    // Adicione 'userType' aqui
+    const { username, password, userType } = req.body;
     const db = JSON.parse(fs.readFileSync('db.json', 'utf8'));
-    const user = db.teams.find(u => u.username === username && u.password === password);
     
-    if (user) res.json({ success: true, user });
-    else res.json({ success: false, error: 'Credenciais inválidas' });
+    // Altere a linha de busca para incluir a verificação do 'role'
+    const user = db.teams.find(u => u.username === username && u.password === password && u.role === userType);
+    
+    if (user) {
+        res.json({ success: true, user });
+    } else {
+        res.json({ success: false, error: 'Credenciais inválidas' });
+    }
 });
 
 app.listen(3000, () => {

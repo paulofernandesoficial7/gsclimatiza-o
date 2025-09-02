@@ -1239,21 +1239,31 @@
         }
         
         loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const userType = document.getElementById('user-type').value;
+    e.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const userType = document.getElementById('user-type').value;
 
-            const user = users.find(u => u.username === username && u.password === password && u.role === userType);
-
-            if (user) {
-                loggedInUser = user;
-                sessionStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
-                renderDashboard();
-            } else {
-                alert('Usuário, senha ou tipo de usuário incorretos.');
-            }
-        });
+    fetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            loggedInUser = data.user;
+            sessionStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
+            renderDashboard();
+        } else {
+            alert('Usuário, senha ou tipo de usuário incorretos.');
+        }
+    })
+    .catch(error => {
+        console.error('Erro de rede:', error);
+        alert('Ocorreu um erro ao tentar conectar com o servidor. Tente novamente.');
+    });
+});
         
         function renderDashboard() {
             loginContainer.style.display = 'none';
