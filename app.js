@@ -1,5 +1,5 @@
 // app.js - Sistema GS Climatização - Versão Completa e Funcional
-console.log('🔧 Sistema GS Climatização carregando...');
+console.log('🔧 Sistema Solution carregando...');
 
 // Dados locais
 let users = [
