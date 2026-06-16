@@ -2,23 +2,23 @@
   "teams": [
     {
       "id": "1",
-      "name": "João Silva",
+      "name": "Usuario 1",
       "username": "joao",
-      "password": "$2b$10$OXYo.dIzsJuoVwEAQGyVweoYHiBXfu09J8jMi/6QuUMZozuuMrS6y",
+      "password": "123456",
       "role": "technician"
     },
     {
       "id": "2",
-      "name": "Maria Santos",
+      "name": "Usuario 2",
       "username": "maria",
-      "password": "$2b$10$OXYo.dIzsJuoVwEAQGyVweoYHiBXfu09J8jMi/6QuUMZozuuMrS6y",
+      "password": "123456",
       "role": "technician"
     },
     {
       "id": "3",
       "name": "Administrador",
       "username": "admin",
-      "password": "$2b$10$bmMzY/LP4QOc5EGEh1ImteoN.NIfCe9QDabwpFFp9CRAlWzqAisDm",
+      "password": "admin",
       "role": "admin"
     }
   ],
